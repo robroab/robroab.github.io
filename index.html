@@ -1,57 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
+
+  
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+
+  <title>CV Rodrigo Barrios</title>
+
+    <link rel="canonical" href="https://codepen.io/mavrK/pen/PzGvdJ">
+  
+  <link rel="stylesheet" href="styles.css">
+
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>John Doe</h1>
-            <p>Web Developer</p>
-        </header>
-        
-        <div class="section">
-            <h2 onclick="toggleSection('education')">Education</h2>
-            <div class="section-content" id="education">
-                <p>Bachelor of Science in Computer Science - XYZ University</p>
-                <p>Graduated: May 2020</p>
-            </div>
-        </div>
 
-        <div class="section">
-            <h2 onclick="toggleSection('experience')">Experience</h2>
-            <div class="section-content" id="experience">
-                <p>Software Engineer - ABC Company</p>
-                <p>July 2020 - Present</p>
-                <ul>
-                    <li>Developed web applications using HTML, CSS, and JavaScript.</li>
-                    <li>Collaborated with cross-functional teams to design and ship new features.</li>
-                </ul>
-            </div>
-        </div>
+<body translate="no">
+  <!-- FONTS -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 
-        <div class="section">
-            <h2 onclick="toggleSection('skills')">Skills</h2>
-            <div class="section-content" id="skills">
-                <ul>
-                    <li>HTML5, CSS3, JavaScript</li>
-                    <li>Responsive Web Design</li>
-                    <li>Version Control (Git)</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 onclick="toggleSection('contact')">Contact</h2>
-            <div class="section-content" id="contact">
-                <p>Email: john.doe@example.com</p>
-                <p>Phone: +1234567890</p>
-            </div>
-        </div>
+<!-- PAGE STUFF -->
+<div class="rela-block page">
+    <div class="rela-block top-bar">
+        <div class="caps name"><div class="abs-center">Rodrigo Barrios</div></div>
     </div>
-    <script src="script.js"></script>
+    <div class="side-bar">
+        <div class="mugshot">
+            <div class="logo">
+                <svg viewbox="0 0 80 80" class="rela-block logo-svg">
+                    <path d="M 10 10 L 52 10 L 72 30 L 72 70 L 30 70 L 10 50 Z" stroke-width="2.5" fill="none"/>
+                </svg>
+                <p class="logo-text">RB</p>
+            </div>
+        </div>
+          <p class="rela-block caps side-header">Informacion</p>
+        <p>San Cristobal, Guatemala</p>
+        <p>5357-1753</p>
+        <p>rodrigobarrios65@gmail.com</p><br>
+        <p class="rela-block social linked-in"><a href="https://www.linkedin.com/in/rodrigo-barrios-6a9892276?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Linked-in</a></p>
+        <p class="rela-block caps side-header">Habilidades</p>
+        <p class="side-list">HTML & CSS</p>
+        <p class="side-list">Javascript</p>
+        <p class="side-list">Power Bi </p>
+        <p class="side-list">SQL, Tableau, Google Data Studio</p>
+        <p class="rela-block caps side-header">Educacion</p>
+        <p class="side-list">Licenciatura en Tecnologia y Administracion de Empresas</p>
+        <p class="side-list">Tecnico en Desarrollo de Software</p>
+
+    </div>
+    <div class="rela-block content-container">
+        <h2 class="rela-block caps title">Analista de Datos</h2>
+        <div class="rela-block separator"></div>
+        <div class="rela-block caps greyed">Perfil</div>
+        <p class="long-margin">Analista de datos con experiencia en Power BI, Tableau y Looker Studio. Conocimientos en SQL para bases de datos. </p>
+        <div class="rela-block caps greyed">Experiencia</div>
+
+        <h3>Supervisor de QA - Google DSCC</h3>
+        <p class="justified">Como responsable de control de calidad, mi tarea principal consistía en 
+recopilar y manipular datos relacionados con el análisis de la calidad 
+dentro del programa DSCC de Google. Esto incluía la recopilación de 
+datos mediante SQL y CSV. Además, estos datos se analizaban para 
+presentarlos a las partes interesadas mediante técnicas de elaboración de 
+informes de datos, como la creación de dashboards con Power Bi y Looker 
+Studio. Se me encomendó la tarea de supervisar y garantizar la calidad de 
+las interacciones con los clientes y de los servicios prestados por los 
+representantes de atención al cliente a través de los analistas de control 
+de calidad. Esta responsabilidad implica el diseño y la aplicación de 
+procesos de control de calidad y el suministro de información y 
+asesoramiento a los miembros del equipo para mejorar su rendimiento. </p>
+        
+        <h3>Analista de Calidad del cliente - Roblox</h3>
+        <p class="justified">Como Analista de Calidad del Cliente para el Servicio de Atención al 
+Cliente de Roblox, mi función principal es garantizar que las operaciones 
+e interacciones del servicio de atención al cliente de la empresa cumplan 
+con los estándares de calidad de la empresa. Esto incluye supervisar las 
+interacciones del servicio de atención al cliente para comprobar su 
+precisión, eficacia y satisfacción del cliente, así como su alineación con 
+las necesidades del cliente mediante calibraciones constantes con el 
+equipo de Operaciones.Soy responsable de supervisar y analizar el rendimiento de los 
+representantes de atención al cliente y de utilizar estos datos para 
+identificar las áreas en las que los representantes necesitan mejorar, así 
+como de proporcionar comentarios y formación para ayudarles a 
+alcanzar los objetivos de rendimiento.</p>
+
+        <p class="justified"></p>
+
+
+    </div>
+</div>
+
+
+  
 </body>
+
 </html>
