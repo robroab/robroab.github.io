@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2 Years of Us 💕</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Parisienne&family=Jost:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --rose: #c8556a;
+        --blush: #f2c4ce;
+        --cream: #fdf6f0;
+        --gold: #c9a96e;
+        --deep: #3d1c2e;
+        --soft: #f9eef2;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: var(--cream);
+        color: var(--deep);
+        font-family: "Jost", sans-serif;
+        font-weight: 300;
+        overflow-x: hidden;
+      }
+
+      /* ── PETAL RAIN ── */
+      .petals {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+      }
+      .petal {
+        position: absolute;
+        top: -40px;
+        width: 12px;
+        height: 14px;
+        background: var(--blush);
+        border-radius: 0 60% 0 60%;
+        opacity: 0;
+        animation: fall linear infinite;
+      }
+      .petal:nth-child(odd) {
+        background: #f5d0da;
+        border-radius: 60% 0 60% 0;
+      }
+      .petal:nth-child(3n) {
+        background: #e8a0b0;
+      }
+      @keyframes fall {
+        0% {
+          transform: translateY(0) rotate(0deg);
+          opacity: 0.7;
+        }
+        100% {
+          transform: translateY(110vh) rotate(360deg);
+          opacity: 0;
+        }
+      }
+
+      /* ── HERO ── */
+      .hero {
+        position: relative;
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 3rem 2rem;
+        z-index: 1;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            ellipse 60% 40% at 20% 30%,
+            #f9d8e2 0%,
+            transparent 70%
+          ),
+          radial-gradient(
+            ellipse 50% 50% at 80% 70%,
+            #fce4ec 0%,
+            transparent 70%
+          );
+        z-index: -1;
+      }
+
+      .hero-label {
+        font-family: "Jost", sans-serif;
+        font-size: 0.7rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 1.2rem;
+        animation: fadeUp 0.8s ease both;
+      }
+      .hero-title {
+        font-family: "Parisienne", cursive;
+        font-size: clamp(3.5rem, 12vw, 7rem);
+        color: var(--rose);
+        line-height: 1.1;
+        animation: fadeUp 0.8s 0.15s ease both;
+      }
+      .hero-sub {
+        font-family: "Cormorant Garamond", serif;
+        font-style: italic;
+        font-size: clamp(1rem, 3vw, 1.4rem);
+        color: var(--deep);
+        opacity: 0.7;
+        margin-top: 1rem;
+        animation: fadeUp 0.8s 0.3s ease both;
+      }
+      .hero-divider {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin: 2rem auto;
+        width: min(280px, 80vw);
+        animation: fadeUp 0.8s 0.45s ease both;
+      }
+      .hero-divider span {
+        flex: 1;
+        height: 1px;
+        background: var(--gold);
+        opacity: 0.5;
+      }
+      .hero-divider i {
+        font-style: normal;
+        color: var(--rose);
+        font-size: 1.1rem;
+      }
+      .hero-date {
+        font-size: 0.8rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--gold);
+        animation: fadeUp 0.8s 0.6s ease both;
+      }
+      .scroll-hint {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.65rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--rose);
+        opacity: 0.6;
+        animation: bounce 2s infinite;
+      }
+      .scroll-hint::after {
+        content: "";
+        width: 1px;
+        height: 32px;
+        background: var(--rose);
+      }
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateX(-50%) translateY(0);
+        }
+        50% {
+          transform: translateX(-50%) translateY(6px);
+        }
+      }
+
+      /* ── SECTION WRAPPER ── */
+      section {
+        position: relative;
+        z-index: 1;
+        padding: 5rem 1.5rem;
+      }
+      .section-label {
+        text-align: center;
+        font-size: 0.65rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 0.6rem;
+      }
+      .section-title {
+        text-align: center;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(1.8rem, 5vw, 2.8rem);
+        font-style: italic;
+        color: var(--deep);
+        margin-bottom: 3rem;
+      }
+
+      /* ── CAROUSEL ── */
+      .carousel-wrap {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      .carousel {
+        position: relative;
+        border-radius: 4px;
+        overflow: hidden;
+        aspect-ratio: 4/3;
+        background: var(--blush);
+        box-shadow:
+          0 20px 60px rgba(61, 28, 46, 0.15),
+          0 2px 8px rgba(61, 28, 46, 0.08);
+      }
+      .slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 0.7s ease;
+      }
+      .slide.active {
+        opacity: 1;
+      }
+      .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      /* placeholder when no image */
+      .slide-placeholder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+        background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+        color: var(--rose);
+      }
+      .slide-placeholder .ph-num {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 3.5rem;
+        font-style: italic;
+        opacity: 0.3;
+      }
+      .slide-placeholder .ph-text {
+        font-size: 0.75rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        opacity: 0.5;
+      }
+
+      /* controls */
+      .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        background: rgba(253, 246, 240, 0.85);
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 1rem;
+        color: var(--rose);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(4px);
+        transition:
+          background 0.2s,
+          transform 0.2s;
+        box-shadow: 0 2px 12px rgba(61, 28, 46, 0.12);
+      }
+      .carousel-btn:hover {
+        background: white;
+        transform: translateY(-50%) scale(1.05);
+      }
+      .carousel-btn.prev {
+        left: 0.8rem;
+      }
+      .carousel-btn.next {
+        right: 0.8rem;
+      }
+
+      /* dots */
+      .carousel-dots {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 1.2rem;
+      }
+      .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--blush);
+        border: none;
+        cursor: pointer;
+        transition:
+          background 0.3s,
+          transform 0.3s;
+        padding: 0;
+      }
+      .dot.active {
+        background: var(--rose);
+        transform: scale(1.4);
+      }
+
+      /* counter */
+      .carousel-counter {
+        text-align: center;
+        font-size: 0.7rem;
+        letter-spacing: 0.15em;
+        color: var(--gold);
+        margin-top: 0.8rem;
+        text-transform: uppercase;
+      }
+
+      /* ── MEMORY GRID ── */
+      .memory-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .memory-card {
+        background: white;
+        border-radius: 2px;
+        overflow: hidden;
+        box-shadow: 0 4px 24px rgba(61, 28, 46, 0.07);
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease,
+          box-shadow 0.3s;
+      }
+      .memory-card.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .memory-card:hover {
+        box-shadow: 0 12px 40px rgba(61, 28, 46, 0.14);
+      }
+      .memory-card-img {
+        aspect-ratio: 4/3;
+        overflow: hidden;
+        background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .memory-card-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .memory-card-img .ph-num {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 2.5rem;
+        font-style: italic;
+        color: var(--rose);
+        opacity: 0.3;
+      }
+      .memory-card-body {
+        padding: 1.2rem 1.4rem 1.4rem;
+      }
+      .memory-card-tag {
+        font-size: 0.6rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 0.4rem;
+      }
+      .memory-card-caption {
+        font-family: "Cormorant Garamond", serif;
+        font-style: italic;
+        font-size: 1.05rem;
+        color: var(--deep);
+        line-height: 1.5;
+      }
+
+      /* ── LETTER ── */
+      .letter-section {
+        background: linear-gradient(to bottom, var(--soft), var(--cream));
+      }
+      .letter-card {
+        max-width: 580px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 2px;
+        padding: clamp(2rem, 6vw, 3.5rem);
+        box-shadow:
+          0 8px 40px rgba(61, 28, 46, 0.08),
+          0 0 0 1px rgba(201, 169, 110, 0.15);
+        position: relative;
+      }
+      .letter-card::before {
+        content: '"';
+        position: absolute;
+        top: 0.8rem;
+        left: 1.5rem;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 5rem;
+        color: var(--blush);
+        line-height: 1;
+      }
+      .letter-text {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+        line-height: 1.9;
+        color: var(--deep);
+        font-style: italic;
+        padding-top: 1rem;
+      }
+      .letter-sig {
+        display: block;
+        text-align: right;
+        font-family: "Parisienne", cursive;
+        font-size: 1.6rem;
+        color: var(--rose);
+        margin-top: 1.8rem;
+      }
+
+      /* ── FOOTER ── */
+      footer {
+        text-align: center;
+        padding: 4rem 1.5rem 3rem;
+        position: relative;
+        z-index: 1;
+      }
+      .footer-heart {
+        font-size: 1.5rem;
+        color: var(--rose);
+        display: block;
+        margin-bottom: 1rem;
+        animation: heartbeat 1.4s ease infinite;
+      }
+      @keyframes heartbeat {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+      }
+      .footer-text {
+        font-family: "Cormorant Garamond", serif;
+        font-style: italic;
+        font-size: 1rem;
+        color: var(--deep);
+        opacity: 0.5;
+      }
+
+      /* ── UTILITIES ── */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Petal rain -->
+    <div class="petals" id="petals"></div>
+
+    <!-- ── HERO ── -->
+    <div class="hero">
+      <p class="hero-label">Two years of love</p>
+      <h1 class="hero-title">Happy 2nd<br />Anniversary</h1>
+      <p class="hero-sub">Every day with you is my favorite day.</p>
+      <div class="hero-divider">
+        <span></span>
+        <i>♡</i>
+        <span></span>
+      </div>
+      <p class="hero-date">— celebrating us —</p>
+      <div class="scroll-hint">scroll</div>
+    </div>
+
+    <!-- ── CAROUSEL ── -->
+    <section>
+      <p class="section-label">Our moments</p>
+      <h2 class="section-title">Through the lens of us</h2>
+
+      <div class="carousel-wrap">
+        <div class="carousel" id="carousel">
+          <!-- ★ SLIDE 1 — replace src with your image path -->
+          <div class="slide active">
+            <div class="slide-placeholder">
+              <span class="ph-num"></span>
+              <img src="2yr/andares.jpeg" alt="Memory 1" />
+            </div>
+          </div>
+
+          <!-- ★ SLIDE 2 -->
+          <div class="slide">
+            <div class="slide-placeholder">
+              <span class="ph-num"></span>
+              <span class="ph-text"></span>
+              <img src="2yr/bday.jpeg" alt="Memory 2" />
+            </div>
+          </div>
+
+          <!-- ★ SLIDE 3 -->
+          <div class="slide">
+            <div class="slide-placeholder">
+              <span class="ph-num"></span>
+              <span class="ph-text"></span>
+              <img src="2yr/bea1.jpeg" alt="Memory 3" />
+            </div>
+          </div>
+
+          <!-- ★ SLIDE 4 -->
+          <div class="slide">
+            <div class="slide-placeholder">
+              <span class="ph-num"></span>
+              <span class="ph-text"></span>
+              <img src="2yr/bea2.jpeg" alt="Memory 3" />
+            </div>
+          </div>
+
+          <!-- ★ SLIDE 5 -->
+          <div class="slide">
+            <div class="slide-placeholder">
+              <span class="ph-num"></span>
+              <span class="ph-text"></span>
+              <img src="2yr/wed.jpeg" alt="Memory 3" />
+            </div>
+            <!-- <img src="your-photo-5.jpg" alt="Memory 5" /> -->
+          </div>
+
+          <!-- ★ SLIDE 6 -->
+          <div class="slide">
+            <div class="slide-placeholder">
+              <span class="ph-num"></span>
+              <span class="ph-text"></span>
+              <img src="2yr/hw.jpeg" alt="Memory 3" />
+            </div>
+            <!-- <img src="your-photo-6.jpg" alt="Memory 6" /> -->
+          </div>
+
+          <!-- ★ SLIDE 7 -->
+          <div class="slide">
+            <div class="slide-placeholder">
+              <span class="ph-num"></span>
+              <span class="ph-text"></span>
+              <img src="2yr/dam2.jpeg" alt="Memory 3" />
+            </div>
+            <!-- <img src="your-photo-7.jpg" alt="Memory 7" /> -->
+          </div>
+
+          <!-- ★ SLIDE 8 -->
+          <div class="slide">
+            <div class="slide-placeholder">
+              <span class="ph-num"></span>
+              <span class="ph-text"></span>
+              <img src="2yr/bea3.jpeg" alt="Memory 3" />
+            </div>
+            <!-- <img src="your-photo-8.jpg" alt="Memory 8" /> -->
+          </div>
+
+          <!-- ★ SLIDE 9 -->
+          <div class="slide">
+            <div class="slide-placeholder">
+              <span class="ph-num"></span>
+              <span class="ph-text"></span>
+              <img src="2yr/dam1.jpeg" alt="Memory 3" />
+            </div>
+            <!-- <img src="your-photo-9.jpg" alt="Memory 9" /> -->
+          </div>
+
+          <button class="carousel-btn prev" onclick="changeSlide(-1)">
+            &#8592;
+          </button>
+          <button class="carousel-btn next" onclick="changeSlide(1)">
+            &#8594;
+          </button>
+        </div>
+
+        <div class="carousel-dots" id="dots"></div>
+        <p class="carousel-counter" id="counter">1 / 10</p>
+      </div>
+    </section>
+
+    <!-- ── LETTER ── -->
+    <section class="letter-section">
+      <p class="section-label">A note for you</p>
+      <h2 class="section-title">From my heart</h2>
+
+      <div class="letter-card">
+        <p class="letter-text">
+          Two years ago we decided to let ourselves fall in love, and our lives
+          changed forever. Every laugh we've shared, every quiet moment, every
+          adventure — they've all become the best chapters of my story. I didn't
+          know love could feel this easy, this safe, this full. I'm happy to
+          know that even when I'm not in my best, you still see the best in me.
+          I'm really excited to I'll be growing old with you, and when I say I
+          think a lot about the future, it's because I can't wait to see all the
+          things we'll do together. Thank you for being my partner, my
+          confidant, and my greatest joy.
+        </p>
+        <span class="letter-sig">Forever yours ♡</span>
+        <span class="letter-sig">Rodri</span>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+      <span class="footer-heart">♥</span>
+      <p class="footer-text">Two years down, forever to go.</p>
+    </footer>
+
+    <script>
+      // ── Petals
+      const petalContainer = document.getElementById("petals");
+      for (let i = 0; i < 18; i++) {
+        const p = document.createElement("div");
+        p.className = "petal";
+        p.style.left = Math.random() * 100 + "vw";
+        p.style.width = 8 + Math.random() * 10 + "px";
+        p.style.height = 10 + Math.random() * 12 + "px";
+        p.style.animationDuration = 6 + Math.random() * 8 + "s";
+        p.style.animationDelay = Math.random() * 10 + "s";
+        petalContainer.appendChild(p);
+      }
+
+      // ── Carousel
+      let current = 0;
+      const slides = document.querySelectorAll(".slide");
+      const dotsWrap = document.getElementById("dots");
+      const counter = document.getElementById("counter");
+      const total = slides.length;
+
+      slides.forEach((_, i) => {
+        const d = document.createElement("button");
+        d.className = "dot" + (i === 0 ? " active" : "");
+        d.setAttribute("aria-label", "Slide " + (i + 1));
+        d.onclick = () => goTo(i);
+        dotsWrap.appendChild(d);
+      });
+
+      function goTo(n) {
+        slides[current].classList.remove("active");
+        dotsWrap.children[current].classList.remove("active");
+        current = (n + total) % total;
+        slides[current].classList.add("active");
+        dotsWrap.children[current].classList.add("active");
+        counter.textContent = current + 1 + " / " + total;
+      }
+
+      function changeSlide(dir) {
+        goTo(current + dir);
+      }
+
+      // auto-advance
+      setInterval(() => changeSlide(1), 4500);
+
+      // keyboard
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") changeSlide(-1);
+        if (e.key === "ArrowRight") changeSlide(1);
+      });
+
+      // touch swipe
+      let touchStartX = 0;
+      const car = document.getElementById("carousel");
+      car.addEventListener("touchstart", (e) => {
+        touchStartX = e.touches[0].clientX;
+      });
+      car.addEventListener("touchend", (e) => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) changeSlide(diff > 0 ? 1 : -1);
+      });
+
+      // ── Scroll reveal for memory cards
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e, i) => {
+            if (e.isIntersecting) {
+              setTimeout(() => e.target.classList.add("visible"), i * 80);
+            }
+          });
+        },
+        { threshold: 0.15 },
+      );
+      document
+        .querySelectorAll(".memory-card")
+        .forEach((c) => observer.observe(c));
+    </script>
+  </body>
+</html>
